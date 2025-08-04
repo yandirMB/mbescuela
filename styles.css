@@ -140,3 +140,20 @@ html {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 1000;
 }
+
+.bono {
+  background-color: #fdf2e9;
+  border-top: 4px solid #ffa600;
+  border-bottom: 4px solid #ffa600;
+}
+
+.bono ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bono ul li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
