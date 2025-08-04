@@ -157,3 +157,47 @@ html {
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.curso-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.qr-img {
+  width: 220px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.video-reel iframe {
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.bono {
+  background-color: #fdf2e9;
+  border-top: 4px solid #ffa600;
+  border-bottom: 4px solid #ffa600;
+}
+
+.bono ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bono ul li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
