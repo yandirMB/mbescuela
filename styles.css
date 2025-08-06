@@ -1,144 +1,155 @@
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff5f7;
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff5f7;
+  color: #333;
 }
 
 header {
-    background: linear-gradient(135deg, #009688, #4db6ac);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+  background: linear-gradient(135deg, #009688, #4db6ac);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 .logo {
-    width: 140px;
-    height: auto;
+  width: 140px;
+  height: auto;
 }
 
 h1, h2, h3 {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .seccion {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
 }
 
 .seccion:nth-child(even) {
-    background-color: #e0f7fa;
+  background-color: #e0f7fa;
+}
+
+.cursos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .curso {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 500px;
-    margin: 20px auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
-    background-color: #25D366;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 15px;
-    font-weight: bold;
-    transition: all 0.3s ease;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #128C7E;
-    transform: scale(1.05);
+  background-color: #128C7E;
+  transform: scale(1.05);
 }
 
 blockquote {
-    font-style: italic;
-    background: #f0f0f0;
-    border-left: 5px solid #009688;
-    padding: 15px;
-    margin: 20px auto;
-    max-width: 500px;
-    border-radius: 8px;
+  font-style: italic;
+  background: #f0f0f0;
+  border-left: 5px solid #009688;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 8px;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #004d40;
-    color: white;
+  text-align: center;
+  padding: 20px;
+  background-color: #004d40;
+  color: white;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 22px;
-    }
+  header h1 {
+    font-size: 22px;
+  }
 
-    .btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 
-    .logo {
-        width: 100px;
-    }
+  .logo {
+    width: 100px;
+  }
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 80px;
 }
 
 .nav {
-    position: sticky;
-    top: 0;
-    background-color: #004d40;
-    padding: 10px;
-    text-align: center;
-    z-index: 999;
+  position: sticky;
+  top: 0;
+  background-color: #004d40;
+  padding: 10px;
+  text-align: center;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav ul li {
-    display: inline;
-    margin: 0 15px;
+  display: inline;
+  margin: 0 15px;
 }
 
 .nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .nav ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    font-size: 30px;
-    padding: 10px 15px;
-    border-radius: 50%;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 30px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
 .bono {
@@ -155,10 +166,6 @@ html {
 .bono ul li {
   margin: 10px 0;
   font-size: 16px;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .curso-img {
@@ -185,19 +192,9 @@ html {
   margin-top: 20px;
 }
 
-.bono {
-  background-color: #fdf2e9;
-  border-top: 4px solid #ffa600;
-  border-bottom: 4px solid #ffa600;
+@media (max-width: 400px) {
+  .whatsapp-float {
+    font-size: 24px;
+    padding: 8px 12px;
+  }
 }
-
-.bono ul {
-  list-style: none;
-  padding: 0;
-}
-
-.bono ul li {
-  margin: 10px 0;
-  font-size: 16px;
-}
-
