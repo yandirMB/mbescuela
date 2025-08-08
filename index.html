@@ -175,9 +175,16 @@
   </style>
 </head>
 <body>
-<header class="logo-container">
-  <img src="img/logo-mbescuela.png" alt="MB Escuela Logo" class="logo" />
-  <h1 class="logo-text">MB Escuela – Estilo con propósito</h1>
+
+<header id="inicio" style="position:relative;">
+  <video autoplay muted loop style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:-1;">
+    <source src="videos/hero-video.mp4" type="video/mp4">
+  </video>
+  <div style="padding:100px 20px; position:relative; z-index:1; color:white; text-shadow:1px 1px 3px #000;">
+    <h1 style="font-size:2.5rem;">Conviértete en Peluquera Profesional en 8 Semanas</h1>
+    <p style="font-size:1.2rem;">Certificación internacional • Práctica con modelos reales</p>
+    <a href="#cursos" class="btn" style="background:#D4AF37; font-size:1.1rem;">Ver Cursos Disponibles</a>
+  </div>
 </header>
 
 <!-- MENÚ -->
@@ -276,6 +283,14 @@
     <p>📝 ¿Tomaste uno de nuestros cursos y quieres dejar tu opinión?</p>
     <a href="https://wa.me/51969121250?text=Quiero%20dejar%20mi%20testimonio%20sobre%20MB%20Escuela" class="btn">💬 Enviar testimonio por WhatsApp</a>
   </section>
+<!-- Modifica el carrusel por esto: -->
+<div class="testimonio-card">
+  <img src="img/testimonio-ana.jpg" alt="Ana, egresada 2024" style="width:80px; height:80px; border-radius:50%; object-fit:cover;">
+  <video controls style="width:100%; max-width:300px; border-radius:12px; margin:10px 0;">
+    <source src="videos/testimonio-ana.mp4" type="video/mp4">
+  </video>
+  <p>"Ahora gano S/1,500 semanales gracias al curso de Alisado Pro"</p>
+</div>
 
   <!-- Swiper.js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -320,5 +335,19 @@
       <a href="https://www.facebook.com/share/19k7sx7vxw/" target="_blank">Facebook</a>
     </p>
   </footer>
+// Añade esto antes de </body>:
+<script>
+  setTimeout(() => {
+    const popup = document.createElement('div');
+    popup.innerHTML = `
+      <div style="position:fixed; bottom:20px; right:20px; background:#D4AF37; color:#000; padding:15px; border-radius:8px; z-index:9999; box-shadow:0 4px 8px rgba(0,0,0,0.2); max-width:300px;">
+        <p style="margin:0; font-weight:bold;">🔥 3 CUPOS DISPONIBLES</p>
+        <p style="margin:5px 0;">¡50% de descuento si reservas hoy!</p>
+        <a href="https://wa.me/51969121250" style="color:#000; text-decoration:underline;">Quiero mi descuento</a>
+      </div>
+    `;
+    document.body.appendChild(popup);
+  }, 30000);
+</script>
 </body>
 </html>
