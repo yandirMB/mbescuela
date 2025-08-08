@@ -291,14 +291,28 @@
     <p>📝 ¿Tomaste uno de nuestros cursos y quieres dejar tu opinión?</p>
     <a href="https://wa.me/51969121250?text=Quiero%20dejar%20mi%20testimonio%20sobre%20MB%20Escuela" class="btn">💬 Enviar testimonio por WhatsApp</a>
   </section>
-<!-- Modifica el carrusel por esto: -->
-<div class="testimonio-card">
-  <img src="img/testimonio-ana.jpg" alt="Ana, egresada 2024" style="width:80px; height:80px; border-radius:50%; object-fit:cover;">
-  <video controls style="width:100%; max-width:300px; border-radius:12px; margin:10px 0;">
-    <source src="videos/testimonio-ana.mp4" type="video/mp4">
-  </video>
-  <p>"Ahora gano S/1,500 semanales gracias al curso de Alisado Pro"</p>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<div class="swiper mySwiper" style="max-width: 800px; margin: 0 auto;">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <video controls width="100%">
+        <source src="videos/testimonio1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="swiper-slide">
+      <iframe src="https://www.instagram.com/reel/DL0r5T6xwpS/embed" width="100%" height="500" frameborder="0"></iframe>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  new Swiper(".mySwiper", {
+    pagination: { el: ".swiper-pagination" },
+  });
+</script>
 
   <!-- Swiper.js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
