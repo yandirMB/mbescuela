@@ -14,9 +14,39 @@ header {
   padding: 40px 20px;
 }
 
+.logo-container {
+  text-align: center;
+  padding: 30px 20px;
+}
+
 .logo {
-  width: 140px;
-  height: auto;
+  width: 200px;
+  animation: logoFadeIn 1.5s ease-in-out;
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #13745F; /* Verde esmeralda */
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Animación */
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
 }
 
 h1, h2, h3 {
