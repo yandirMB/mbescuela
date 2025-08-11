@@ -74,6 +74,7 @@
             margin: 0;
             color: var(--text);
             background-color: var(--light-bg);
+            padding-top: 50px; /* Espacio para que la barra de navegación no cubra el contenido */
         }
 
         .seccion {
@@ -136,14 +137,17 @@
             font-weight: 300;
         }
 
-        /* Navegación */
+        /* Navegación - SOLUCIÓN PARA QUE NO DESAPAREZCA */
         .nav {
             background-color: var(--white);
             padding: 10px 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 10;
+            position: fixed; /* Mantiene la barra de navegación fija en su posición */
+            top: 0; /* La fija en la parte superior */
+            left: 0; /* La alinea a la izquierda */
+            width: 100%; /* Asegura que ocupe todo el ancho */
+            z-index: 100; /* Asegura que esté sobre otros elementos */
+            box-sizing: border-box; /* Para que el padding no afecte el ancho */
         }
 
         .nav ul {
@@ -350,7 +354,7 @@
     <header id="inicio" class="hero">
         <video autoplay muted loop playsinline class="hero-video">
             <source src="videos/hero-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            Tu navegador no soporta el video.
         </video>
         <div class="logo-container">
             <img src="images/logo.png" alt="MB Escuela" class="hero-logo" />
