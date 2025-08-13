@@ -1,81 +1,82 @@
 :root {
-  --primary: #004d40;
-  --primary-light: #39796b;
-  --secondary: #D4AF37;
-  --secondary-light: #e8c873;
-  --whatsapp: #25D366;
-  --whatsapp-dark: #128C7E;
-  --text: #333;
-  --text-light: #555;
-  --light-bg: #fff5f7;
-  --white: #ffffff;
-  --gray: #f5f5f5;
-  --dark-gray: #e0e0e0;
+    --primary: #004d40;
+    --primary-light: #39796b;
+    --secondary: #D4AF37;
+    --secondary-light: #e8c873;
+    --whatsapp: #25D366;
+    --whatsapp-dark: #128C7E;
+    --text: #333;
+    --text-light: #555;
+    --light-bg: #fff5f7;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+    --dark-gray: #e0e0e0;
 }
 
-/* Base Styles */
+/* Base Styles (sin cambios, ya están bien) */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  scroll-behavior: smooth;
-  font-size: 16px;
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: var(--text);
-  background-color: var(--light-bg);
-  overflow-x: hidden;
+    /* Usaremos una fuente más moderna como Poppins */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--light-bg);
+    overflow-x: hidden;
 }
 
 [id] {
-  scroll-margin-top: 80px;
+    scroll-margin-top: 80px;
 }
 
-/* Typography */
+/* Typography (optimizado) */
 h1, h2, h3, h4 {
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color: var(--primary);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--primary);
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); } /* H1 más responsive */
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); } /* H2 más responsive */
+h3 { font-size: clamp(1.5rem, 3.5vw, 2rem); } /* H3 más responsive */
 h4 { font-size: 1.5rem; }
 
 p {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color 0.3s ease;
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--primary-light);
+    color: var(--primary-light);
 }
 
 /* Layout */
 .seccion {
-  padding: 4rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .seccion:nth-child(even) {
-  background-color: var(--white);
+    background-color: var(--white);
 }
 
-/* Navegación */
+/* Navegación (sin cambios, ya está bien) */
 .nav {
     background-color: var(--white);
     padding: 10px 20px;
@@ -98,7 +99,7 @@ a:hover {
 }
 
 .nav-link {
-    color: var(--text); /* Esta es la línea que soluciona el problema */
+    color: var(--text);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
@@ -108,146 +109,250 @@ a:hover {
     color: var(--primary);
 }
 
-/* Buttons */
+
+/* SECCIÓN HERO OPTIMIZADA */
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    min-height: 80vh;
+    text-shadow: 1px 1px 3px #000;
+    padding: 0; /* Eliminamos el padding aquí */
+}
+
+/* Fondo de video y overlay */
+.hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.hero-bg-video blockquote,
+.hero-bg-video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+/* Contenido del Hero (sobre el video) */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 100px 20px;
+    background-color: rgba(0,0,0,0.4); /* Overlay semitransparente */
+}
+
+
+/* Buttons (optimizados) */
 .btn {
-  display: inline-block;
-  background-color: var(--whatsapp);
-  color: var(--white);
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
+    display: inline-block;
+    background-color: var(--primary); /* Usamos el color principal */
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 .btn:hover {
-  background-color: var(--whatsapp-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Courses */
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--text);
+    border: 2px solid var(--secondary);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: transparent;
+    color: var(--secondary);
+}
+
+/* Courses (optimizado con efectos) */
 .cursos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .curso {
-  background: var(--white);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .curso:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .curso-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px 10px 0 0;
 }
 
 .curso > div {
-  padding: 1.5rem;
+    padding: 1.5rem;
 }
 
-/* Testimonials */
+.curso h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Testimonials (optimizado con un poco de padding) */
 .testimonial-slider {
-  padding: 2rem 0;
+    padding: 2rem 0;
 }
 
 .testimonial-card {
-  padding: 2rem;
-  margin: 0 1rem;
-  background: var(--white);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin: 0 1rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .testimonial-author {
-  margin-top: 1.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .testimonial-author img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 1rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
 }
 
-/* FAQ */
+/* FAQ (sin cambios, ya está bien) */
 .faq-item {
-  background: var(--white);
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background: var(--white);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .faq-item h3 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
 }
 
-/* Footer */
+/* Footer (sin cambios, ya está bien) */
 footer {
-  background: var(--primary);
-  color: var(--white);
-  text-align: center;
-  padding: 2rem 1rem;
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
 footer a {
-  color: var(--secondary-light);
-  font-weight: 600;
+    color: var(--secondary-light);
+    font-weight: 600;
 }
 
 footer a:hover {
-  color: var(--secondary);
+    color: var(--secondary);
+}
+
+/* WhatsApp Float Button (sin cambios, ya está bien) */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+/* Popup (sin cambios, ya está bien) */
+.popup-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--secondary);
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-width: 300px;
+    animation: fadeInUp 0.5s;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
-  
-  .seccion {
-    padding: 3rem 1rem;
-  }
-  
-  .cursos {
-    grid-template-columns: 1fr;
-  }
-  
-  .nav ul li {
-    margin: 0.5rem;
-  }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    .seccion {
+        padding: 3rem 1rem;
+    }
+    
+    .cursos {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav ul li {
+        margin: 0.5rem;
+    }
 }
 
 @media (max-width: 480px) {
-  html {
-    font-size: 14px;
-  }
-  
-  .testimonial-author {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .testimonial-author img {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-  }
+    html {
+        font-size: 14px;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .testimonial-author img {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
 }
